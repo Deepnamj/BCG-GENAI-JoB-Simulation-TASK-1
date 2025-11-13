@@ -1,9 +1,3 @@
-That's a great idea\! Putting your project on GitHub with a comprehensive `README` is essential for sharing your work.
-
-Based on the images of your financial data analysis project (loading data, calculating growth metrics, generating plots, and summarizing findings), here is a suggested `README.md` file covering all the steps.
-
------
-
 ## 📈 Financial Data Analysis: Tech Giants (2022-2024)
 
 This project analyzes and compares the key financial performance metrics (Revenue, Net Income, and Operating Cash Flow) of three major tech companies—**Microsoft**, **Tesla**, and **Apple**—for the fiscal years 2022 through 2024.
