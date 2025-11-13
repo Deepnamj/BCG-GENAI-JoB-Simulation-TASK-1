@@ -53,13 +53,17 @@ Growth(%)=( Current Year Value−Previous Year Value / Previous Year Value )×10
 Python
 
 # Calculate Y-o-Y growth metrics using groupby and pct_change
+
 df['Revenue Growth (%)'] = df.groupby(['Company'])['Total Revenue'].pct_change() * 100
+
 df['Net Income Growth (%)'] = df.groupby(['Company'])['Net Income'].pct_change() * 100
+
 df['Assets Growth (%)'] = df.groupby(['Company'])['Total Assets'].pct_change() * 100
+
 df['Liabilities Growth (%)'] = df.groupby(['Company'])['Total Liabilities'].pct_change() * 100
+
 df['Operating Cash Flow Growth (%)'] = df.groupby(['Company'])['Cash Flow from Operating Activities'].pct_change() * 100
 
-# The resulting DataFrame (as seen in your first screenshot) will now contain these growth columns.
 Step 3: Visualize Financial Trends
 Generate line plots to visualize the trends of Total Revenue, Net Income, and Operating Cash Flow from 2022 to 2024.
 
@@ -67,19 +71,27 @@ a. Total Revenue Trend Plot
 
 Python
 import matplotlib.pyplot as plt
+
 df = df.sort_values(by=['Company', 'Year'])
 
 plt.figure(figsize=(10,6))
+
 for company in df['Company'].unique():
     company_data = df[df['Company'] == company]
     plt.plot(company_data['Year'], company_data['Total Revenue'], marker='o', label=company)
 
-plt.title("Total Revenue Trend (2022-2024)")
+plt.title("Total Revenue Trend (2022–2024)")
+
 plt.xlabel("Year")
+
 plt.ylabel("Total Revenue (in millions USD)")
-plt.legend(True)
+
+plt.legend()
+
 plt.grid(True)
+
 plt.show()
+
 <img width="876" height="547" alt="output_10_1" src="https://github.com/user-attachments/assets/59a5431f-33b6-43c5-9715-c707c8f958ca" />
 
 b. Net Income Trend Plot
